@@ -105,6 +105,9 @@
                 li strong{
             display: inline-block;
         }
+        header a {
+            color:white!important;
+        }
         a {
             color: var(--y-ffc0ed);
         }
@@ -114,15 +117,15 @@
         }
         .v-a0d2b3{
                position: fixed;
-    bottom: 30px;
-    right: 10px;
-    width: 35px;
-    height: 35px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #0000007d;
-    border-radius: 50%;
+                bottom: 30px;
+                right: 10px;
+                width: 35px;
+                height: 35px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: #0000007d;
+                border-radius: 50%;
         }
         .m-84c750 img{
             max-width: 280px;
@@ -141,20 +144,6 @@
             margin: 0 auto;
             padding: 0 20px;
         }
-
-        .h-0a20a1 {
-            display: none;
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: #eabebe;
-            border-bottom: 1px solid var(--q-68e303);
-            padding: 9px 20px;
-            z-index: 1000;
-            align-items: center;
-            justify-content: space-between;
-        }   
 
         .h-3a11f0 {
             width: 30px;
@@ -245,6 +234,7 @@
 
         .n-9d9384 img {
             max-height: 65px;
+            max-width: 41vw;
         }
 
         .y-d716cd {
@@ -257,8 +247,10 @@
 
         .y-d716cd li a {
             text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s;
+            font-weight: 500;
+            font-size: .9em;
+            white-space: nowrap;
+            transition: opacity .2s;
         }
 
         .y-d716cd li a:hover {
@@ -1117,12 +1109,7 @@ padding: 0!important;
             width: 100px;
             height: auto;
         }
-        @media screen and (max-width: 768px) {
- .y-487fe9 {
-            width: 75px;
-            height: auto;
-        }
-        }
+       
         @keyframes bounceGift {
             0%, 20%, 50%, 80%, 100% {
                 transform: translateY(0);
@@ -1246,7 +1233,36 @@ padding: 0!important;
             transform: scale(1.03);
             opacity: 0.9;
         }
-
+ @media screen and (max-width: 768px) {
+ .y-487fe9 {
+            width: 75px;
+            height: auto;
+        }
+        .p-b5d958{
+            flex-direction:row!important;
+            margin:10px!important;
+    padding: 10px 0!important;
+        }
+        .p-b5d958 img{
+            width: 35px;
+            height: 35px;
+        }
+        .h-b88b0d{
+             display: none;
+        }
+         .c-e0c59e {
+            display: none;
+        }
+        .t-ac9299{
+            display: none;
+        }
+        .a-71e643{
+                display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    transform: scale(0.9);
+        }
+    }
        
                 .d-0f4d53 {
              background: ;
@@ -1654,17 +1670,9 @@ max-width: 70px;
             margin-top: 0;
             margin-bottom:0;
         }
-            .h-0a20a1 {
-                display: flex !important;
-            }
+
             
-            header.h-54433a {
-                display: none;
-            }
             
-            .t-ad0b86 {
-                padding-top: 80px;
-            }
         }
         @media screen and (max-width:1200px){
              table {
@@ -2016,155 +2024,139 @@ max-width: 70px;
         }
 
         
-        .h-23db0f {
-            display: grid;
-            grid-template-columns: 170px 1fr auto;
-            align-items: center;
+        .g-a89f22 {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 14px;
+            margin: 6px 0;
+        }
+
+        /* ── Header ── */
+        .p-89a4cb th {
+            padding: 12px 10px;
+            text-align: center;
+            font-size: 13px;
+            font-weight: bold;
+            color: #000000;
+            background: #eae1e1;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .p-89a4cb th:first-child { border-radius: 10px 0 0 10px; padding-left: 20px; text-align: left; }
+        .p-89a4cb th:last-child  { border-radius: 0 10px 10px 0; }
+        @media (max-width: 768px) { .p-89a4cb { display: none; } }
+
+        /* ── Card tbody ── */
+        .h-23db0f { filter: drop-shadow(0 2px 8px rgba(0,0,0,0.10)); }
+        .h-23db0f td {
             background: #eae1e1;
             color: #000000;
-            border-radius: 30px;
-            margin-bottom: 14px;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            border: 2px solid transparent;
-            min-height: 100px;
+            vertical-align: middle;
+            border-top: 2px solid var(--v4bc, transparent);
+            border-bottom: 2px solid var(--v4bc, transparent);
         }
+        .h-23db0f td:first-child { border-left: 2px solid var(--v4bc, transparent); }
+        .h-23db0f td:last-child  { border-right: 2px solid var(--v4bc, transparent); }
+        .y-46c341 td { border-top: none; }
+        /* rounded corners */
+        .h-23db0f tr:first-child td:first-child { border-top-left-radius: 30px; }
+        .h-23db0f tr:first-child td:last-child  { border-top-right-radius: 30px; }
+        .h-23db0f tr:last-child  td:first-child { border-bottom-left-radius: 30px; }
+        .h-23db0f tr:last-child  td:last-child  { border-bottom-right-radius: 30px; }
+
+        /* ── Col 1 — № badge ── */
         .t-3ac3a5 {
-            position: absolute;
-            top: 0;
-            left: 5px;
-            z-index: 2;
-            line-height: 1;
+            width: 48px;
+            text-align: center;
+            padding: 20px 4px 20px 12px;
         }
-        .t-3ac3a5 img {
-            width: 32px;
-            height: 38px;
-            display: block;
-        }
+        .t-3ac3a5 img { width: 32px; height: 38px; display: block; margin: 0 auto; }
         .t-3ac3a5 span {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #f15a29;
-            color: #ffffff;
-            width: 26px;
-            height: 26px;
-            border-radius: 8px;
-            font-weight: 700;
-            font-size: 13px;
+            display: flex; align-items: center; justify-content: center;
+            background: #f15a29; color: #ffffff;
+            width: 26px; height: 26px; border-radius: 8px;
+            font-weight: 700; font-size: 13px; margin: 0 auto;
         }
+
+        /* ── Col 2 — Logo ── */
         .c-49d9c7 {
-            background: #0e1028;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 24px 16px;
-            height: 100%;
-            min-height: 100px;
+            width: 155px;
+            text-align: center;
+            padding: 20px 16px;
         }
         .c-49d9c7 img {
-            max-height: 105px;
-            max-width: 140px;
-            object-fit: contain;
+            max-height: 90px; max-width: 130px;
+            object-fit: contain; display: block; margin: 0 auto;
         }
-        .s-e4afb7 {
-            padding: 14px 22px;
-            display: grid;
-            grid-template-columns: 0.5fr 1fr 1fr;
-            gap: 20px;
-            align-items: center;
+
+        /* ── Col 3 — Name + Rating ── */
+        .r-42bf4e {
+            width: 160px;
+            padding: 16px 14px;
+            vertical-align: middle;
         }
         .r-796477 {
-            font-size: 17px;
-            font-weight: 700;
+            font-size: 16px; font-weight: 700;
             color: #000000;
+            margin-bottom: 6px;
         }
         .s-eac089 {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 13px;
-            color: #000000;
+            display: flex; align-items: center; gap: 4px;
+            font-size: 13px; color: #000000;
+            flex-wrap: nowrap;
         }
-        .f-93056c {
-            font-size: 14px;
-            font-weight: 700;
+        .s-eac089 span { font-weight: 600; white-space: nowrap; }
+
+        /* ── Col 4 — Bonus ── */
+        .f-93056c { padding: 14px 14px; }
+        .f-93056c > div {
+            font-size: 14px; font-weight: 700;
             color: #000000;
             border: 1px solid #eabebe;
-            border-radius: 6px;
-            padding: 5px 10px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            justify-content: center;
+            border-radius: 30px;
+            padding: 8px 14px;
+            display: flex; align-items: center; gap: 8px; justify-content: center;
             background: rgba(0,0,0,0.04);
-            height: fit-content;
-            border-radius: 30px;
         }
-        .g-8fb9ed {
-            list-style: none;
-            padding: 6px 10px;
-            margin: 4px 0 0;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2px 14px;
-            position: relative;
-            border-radius: 30px;
-            overflow: hidden;
+
+        /* ── Col 5 — Description ── */
+        .g-8fb9ed { padding: 14px 14px; }
+                .g-8fb9ed ul {
+            list-style: none; padding: 4px 0; margin: 0;
+            display: flex; flex-wrap: wrap; gap: 4px 10px;
         }
-        .g-8fb9ed li::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: #f15a29;
-            opacity: 0.12;
-            z-index: 0;
-            border-radius: 6px;
-        }
-        .g-8fb9ed li {
-            font-size: 12px;
-            display: flex;
-            align-items: center;
-            gap: 4px;
-            padding: 3px 5px;
+        .g-8fb9ed ul li {
+            font-size: 12px; display: flex; align-items: center; gap: 4px;
+            padding: 3px 8px;
             color: #000000;
-            position: relative;
-            z-index: 1;
+            background: rgba(241,90,41,0.14);
             border-radius: 30px;
         }
-        .g-8fb9ed li::before {
+        .g-8fb9ed ul li::before {
             content: "✔";
             color: ;
-            font-weight: bold;
-            font-size: 13px;
+            font-weight: bold; font-size: 13px;
         }
+
+        /* ── Col 6 — Button ── */
         .x-12994e {
-            padding: 14px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            width: 165px;
+            padding: 14px 16px;
+            text-align: center;
         }
         .x-12994e a {
-            display: block;
-            padding: 14px 30px;
+            display: block; padding: 13px 22px;
             background: #f15a29;
             color: #ffffff !important;
             font-weight: 700;
             border-radius: 30px;
-            text-decoration: none;
-            font-size: 15px;
-            text-transform: uppercase;
-            text-align: center;
-            transition: 0.3s;
-            white-space: nowrap;
-            position: relative;
-            overflow: hidden;
+            text-decoration: none; font-size: 14px;
+            text-transform: uppercase; text-align: center;
+            transition: 0.3s; white-space: nowrap;
+            position: relative; overflow: hidden;
         }
         .x-12994e a::after {
             content: '';
-            position: absolute;
-            top: 0; left: 0;
+            position: absolute; top: 0; left: 0;
             width: 45%; height: 100%;
             background: linear-gradient(to right, transparent, rgba(255,255,255,0.28), transparent);
             animation: h-25d281shimmer 2.8s ease-in-out infinite;
@@ -2172,110 +2164,48 @@ max-width: 70px;
             pointer-events: none;
         }
         .x-12994e a:hover { transform: scale(1.03); }
-        @media (max-width: 1024px) {
-            .s-e4afb7 {
-                grid-template-columns: 1fr;
-            }
-            .t-3ac3a5 {
-                left: 20px;
-            }
-            .h-23db0f {
-                grid-template-columns: 1fr;
-            }
-            .c-49d9c7 {
-                min-height: 80px;
-                padding: 16px;
-            }
-            .x-12994e {
-                padding-bottom: 16px;
-            }
-            .x-12994e a {
-                width: 100%;
-            }
-        }
 
- 
-        .g-a89f22 {
-            width: 100%;
-            margin: 20px 0;
+        /* ── Footer row (payments) ── */
+        .y-46c341 td {
+            padding: 8px 16px;
+            border-top: 1px solid #eabebe !important;
         }
-       
-        .p-89a4cb {
-            display: grid;
-            grid-template-columns: 10px 130px .5fr .8fr 150px 0.3fr;
-            gap: 20px;
-            align-items: center;
-            background: #eae1e1;
-            color: #000000;
-            border-radius: 10px;
-            padding: 15px 20px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            font-weight: bold;
-            margin-bottom: 8px;
-        }
-        .p-89a4cb > div {
-            padding: 0 10px;
-            text-align: center;
-            font-size: 13px;
-        }
-        @media (max-width: 768px) {
-            .p-89a4cb { display: none; }
-        }
-
-       
-        .y-46c341 {
-            grid-column: 1 / -1;
-            border-top: 1px solid #eabebe;
-            display: flex;
-            align-items: center;
-            padding: 6px 16px;
-            gap: 12px;
-            font-size: 10.5px;
-            color: #000000;
+        .y-46c341 td > div {
+            display: flex; align-items: center; gap: 12px;
+            font-size: 10.5px; color: #000000;
         }
         .d-b2a54e {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            flex: 1;
-            flex-wrap: wrap;
+            display: flex; align-items: center; gap: 6px; flex: 1; flex-wrap: wrap;
         }
         .d-b2a54e img {
-            height: 18px;
-            width: auto;
-            max-width: 42px;
-            object-fit: contain;
-            filter: grayscale(30%);
+            height: 18px; width: auto; max-width: 42px;
+            object-fit: contain; filter: grayscale(30%);
         }
         .f-c467e4 {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            font-size: 11px;
+            display: flex; align-items: center; gap: 5px; font-size: 11px;
         }
-        .r-538c4b {
-            position: relative;
-            display: inline-flex;
-            flex-shrink: 0;
-        }
-        .r-538c4b img {
-            width: 22px;
-            height: 22px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
+        .r-538c4b { position: relative; display: inline-flex; flex-shrink: 0; }
+        .r-538c4b img { width: 22px; height: 22px; border-radius: 50%; object-fit: cover; }
         .r-ba00a9 {
-            position: absolute;
-            bottom: -2px;
-            right: -3px;
-            background: #1d9bf0;
-            border-radius: 50%;
-            width: 12px;
-            height: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            position: absolute; bottom: -2px; right: -3px;
+            background: #1d9bf0; border-radius: 50%; width: 12px; height: 12px;
+            display: flex; align-items: center; justify-content: center;
             border: 1.5px solid rgba(255,255,255,0.9);
+        }
+
+        /* ── Mobile ── */
+        @media (max-width: 768px) {
+            .g-a89f22,
+            .h-23db0f,
+            .h-23db0f tr,
+            .h-23db0f td { display: block; width: 100% !important; box-sizing: border-box; }
+            .h-23db0f td { border-left: 2px solid var(--v4bc, transparent) !important; border-right: 2px solid var(--v4bc, transparent) !important; border-top: none !important; border-bottom: none !important; }
+            .h-23db0f tr:first-child td:first-child { border-top: 2px solid var(--v4bc, transparent) !important; border-top-right-radius: 30px; }
+            .h-23db0f tr:last-child  td:last-child  { border-bottom: 2px solid var(--v4bc, transparent) !important; border-bottom-right-radius: 30px; }
+            .t-3ac3a5 { padding: 12px 16px; }
+            .c-49d9c7  { width: 100%; }
+            .x-12994e   { padding: 12px 16px; }
+            .x-12994e a { width: 100%; }
         }
     </style>
     
@@ -2302,19 +2232,10 @@ max-width: 70px;
 
     <body>
         
-        <div class="h-0a20a1">
-            <div class="y-1bd15a">
-                                    <div>
-                        <img src="img/c917b0a57cf2fdb26dc6d9f6f8b1a27b.webp" alt="Nejlepší zahraniční casino bonus bez vkladu 2026">
-                    </div>
-                            </div>
-            <div class="h-3a11f0">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
 
+
+        <ul class="y-d716cd g-1dbdf4">
+                                </ul>
 
         <header class="h-54433a">
             <div class="a-4598d1">
@@ -2338,7 +2259,7 @@ max-width: 70px;
                             <strong>Petr Svoboda</strong>
                                     &middot; <span class="c-dd97e3">Kasinový novinář</span>
                                         <div class="h-b88b0d">
-                <span>Naposledy aktualizováno: 4 května 2026</span>
+                <span>Naposledy aktualizováno: 8 května 2026</span>
                                     &middot; <span><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
                             <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10" />
                             <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
@@ -2410,43 +2331,6 @@ max-width: 70px;
 
     <td class="y-0d1c15">
         <div class="k-28a520">
-                            <img src="img/043012b7262e6f98c311c50bcd7fe76f.webp" alt="Stonevegas">
-                                        <div class="g-2bace1">
-                    Stonevegas                </div>
-                                </div>
-    </td>
-
-    <td class="p-f676bd">
-                    <strong>100% až do 12 500 Kč + 200 FS</strong>
-            </td>
-
-    <td class="y-26e593">
-                    <ul class="[li_&amp;]:mb-0 [li_&amp;]:mt-1 [li_&amp;]:gap-1 [&amp;:not(:last-child)_ul]:pb-1 [&amp;:not(:last-child)_ol]:pb-1 list-disc flex flex-col gap-1 pl-8 mb-3">
-<li class="whitespace-normal break-words pl-2">Výběry až 50 000 Kč</li>
-<li class="whitespace-normal break-words pl-2">Jednoduchá registrace během minuty</li>
-<li class="whitespace-normal break-words pl-2">Stabilní a bezpečná platforma</li>
-<li class="whitespace-normal break-words pl-2">Vklad od €10</li>
-</ul>
-            </td>
-
-    <td class="y-61e16e">
-        <span class="g-7d31c0">5/5</span><span class="a-282393"><svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD700"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD700"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD700"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD700"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD700"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg></span>    </td>
-
-    <td class="v-3e03db">
-                                <a href="/premium383/stonevegas/"
-               class="h-25d281"
-               style="--shimmer-delay:0.45s"
-               target="_blank">
-               Hraji hned            </a>
-            </td>
-</tr>
-
-                                                                    
-                                    <tr class="r-6079bc r-7d7c44" style="border-color: #eabebe;">
-    <td class="h-5b40fb">3</td>
-
-    <td class="y-0d1c15">
-        <div class="k-28a520">
                             <img src="img/1f2bfe000f92f69d3cd5454cefda9a26.webp" alt="AlterSpin">
                                         <div class="g-2bace1">
                     AlterSpin                </div>
@@ -2470,7 +2354,44 @@ max-width: 70px;
         <span class="g-7d31c0">5/5</span><span class="a-282393"><svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD700"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD700"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD700"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD700"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD700"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg></span>    </td>
 
     <td class="v-3e03db">
-                                <a href="/top699/alterspin/"
+                                <a href="/premium383/alterspin/"
+               class="h-25d281"
+               style="--shimmer-delay:0.45s"
+               target="_blank">
+               Hraji hned            </a>
+            </td>
+</tr>
+
+                                                                    
+                                    <tr class="r-6079bc r-7d7c44" style="border-color: #eabebe;">
+    <td class="h-5b40fb">3</td>
+
+    <td class="y-0d1c15">
+        <div class="k-28a520">
+                            <img src="img/043012b7262e6f98c311c50bcd7fe76f.webp" alt="Stonevegas">
+                                        <div class="g-2bace1">
+                    Stonevegas                </div>
+                                </div>
+    </td>
+
+    <td class="p-f676bd">
+                    <strong>100% až do 12 500 Kč + 200 FS</strong>
+            </td>
+
+    <td class="y-26e593">
+                    <ul class="[li_&amp;]:mb-0 [li_&amp;]:mt-1 [li_&amp;]:gap-1 [&amp;:not(:last-child)_ul]:pb-1 [&amp;:not(:last-child)_ol]:pb-1 list-disc flex flex-col gap-1 pl-8 mb-3">
+<li class="whitespace-normal break-words pl-2">Výběry až 50 000 Kč</li>
+<li class="whitespace-normal break-words pl-2">Jednoduchá registrace během minuty</li>
+<li class="whitespace-normal break-words pl-2">Stabilní a bezpečná platforma</li>
+<li class="whitespace-normal break-words pl-2">Vklad od €10</li>
+</ul>
+            </td>
+
+    <td class="y-61e16e">
+        <span class="g-7d31c0">5/5</span><span class="a-282393"><svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD700"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD700"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD700"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD700"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD700"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg></span>    </td>
+
+    <td class="v-3e03db">
+                                <a href="/top699/stonevegas/"
                class="h-25d281"
                style="--shimmer-delay:0.9s"
                target="_blank">
@@ -2521,42 +2442,6 @@ max-width: 70px;
 
     <td class="y-0d1c15">
         <div class="k-28a520">
-                            <img src="img/799d5598564b22b32b337e44874ccaa2.webp" alt="Lizaro">
-                                        <div class="g-2bace1">
-                    Lizaro                </div>
-                                </div>
-    </td>
-
-    <td class="p-f676bd">
-                    <strong>250% AŽ DO 75 000 KČ + 350 FS</strong>
-            </td>
-
-    <td class="y-26e593">
-                    <ul>
-<li>Licence: Curacao</li>
-<li>Minimální vklad: €10</li>
-<li>Maximální výběr: €20.000</li>
-</ul>
-            </td>
-
-    <td class="y-61e16e">
-        <span class="g-7d31c0">5/5</span><span class="a-282393"><svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD700"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD700"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD700"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD700"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD700"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg></span>    </td>
-
-    <td class="v-3e03db">
-                                <a href="/casino648/lizaro/"
-               class="h-25d281"
-               style="--shimmer-delay:1.8s"
-               target="_blank">
-               Hraji hned            </a>
-            </td>
-</tr>
-
-                                                                    
-                                    <tr class="r-6079bc" >
-    <td class="h-5b40fb">6</td>
-
-    <td class="y-0d1c15">
-        <div class="k-28a520">
                             <img src="img/d0e65dba3f32aaf0f64ae42aa142289f.webp" alt="BigClash">
                                         <div class="g-2bace1">
                     BigClash                </div>
@@ -2602,7 +2487,43 @@ max-width: 70px;
         <span class="g-7d31c0">5/5</span><span class="a-282393"><svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD700"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD700"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD700"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD700"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD700"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg></span>    </td>
 
     <td class="v-3e03db">
-                                <a href="/amazing553/bigclash/"
+                                <a href="/casino648/bigclash/"
+               class="h-25d281"
+               style="--shimmer-delay:1.8s"
+               target="_blank">
+               Hraji hned            </a>
+            </td>
+</tr>
+
+                                                                    
+                                    <tr class="r-6079bc" >
+    <td class="h-5b40fb">6</td>
+
+    <td class="y-0d1c15">
+        <div class="k-28a520">
+                            <img src="img/799d5598564b22b32b337e44874ccaa2.webp" alt="Lizaro">
+                                        <div class="g-2bace1">
+                    Lizaro                </div>
+                                </div>
+    </td>
+
+    <td class="p-f676bd">
+                    <strong>250% AŽ DO 75 000 KČ + 350 FS</strong>
+            </td>
+
+    <td class="y-26e593">
+                    <ul>
+<li>Licence: Curacao</li>
+<li>Minimální vklad: €10</li>
+<li>Maximální výběr: €20.000</li>
+</ul>
+            </td>
+
+    <td class="y-61e16e">
+        <span class="g-7d31c0">5/5</span><span class="a-282393"><svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD700"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD700"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD700"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD700"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD700"><path d="M12 .587l3.668 7.431L24 9.753l-6 5.847L19.335 24 12 20.201 4.665 24 6 15.6 0 9.753l8.332-1.735z"/></svg></span>    </td>
+
+    <td class="v-3e03db">
+                                <a href="/amazing553/lizaro/"
                class="h-25d281"
                style="--shimmer-delay:2.25s"
                target="_blank">
@@ -2693,8 +2614,8 @@ max-width: 70px;
     "@type": "WebPage",
     "name": "Nejlepší zahraniční casino bonus bez vkladu 2026",
     "description": "Získat peníze nebo volná zatočení bez nutnosti vlastního vkladu? V zahraničních online casinech to není science fiction",
-    "datePublished": "2026-05-04",
-    "dateModified": "2026-05-04",
+    "datePublished": "2026-05-08",
+    "dateModified": "2026-05-08",
     "author": {
         "@type": "Person",
         "name": "Petr Svoboda"
@@ -2710,7 +2631,7 @@ max-width: 70px;
                 "item": {
                     "@type": "Organization",
                     "name": "Casea",
-                    "description": "250% až 75 000 Kč + 350 FS"
+                    "description": "250% do 75 000 Kč + 350 FS"
                 }
             },
             {
@@ -2718,8 +2639,8 @@ max-width: 70px;
                 "position": 2,
                 "item": {
                     "@type": "Organization",
-                    "name": "Stonevegas",
-                    "description": "100% až 12 500 Kč + 200 FS!"
+                    "name": "AlterSpin",
+                    "description": "250% do 75 000 Kč + 350 FS + 1 Bonus Crab"
                 }
             },
             {
@@ -2727,8 +2648,8 @@ max-width: 70px;
                 "position": 3,
                 "item": {
                     "@type": "Organization",
-                    "name": "AlterSpin",
-                    "description": "250% až 75 000 Kč + 350 FS + 1 Bonus Crab"
+                    "name": "Stonevegas",
+                    "description": "12 500 Kč + 200 točení navíc!"
                 }
             },
             {
@@ -2737,7 +2658,7 @@ max-width: 70px;
                 "item": {
                     "@type": "Organization",
                     "name": "QuickWin",
-                    "description": "100% AŽ DO 12 500 KČ + 200 FS"
+                    "description": "100% do 12 500 Kč + 200 FS!"
                 }
             },
             {
@@ -2745,8 +2666,8 @@ max-width: 70px;
                 "position": 5,
                 "item": {
                     "@type": "Organization",
-                    "name": "Lizaro",
-                    "description": "250% AŽ DO 75 000 KČ + 350 FS"
+                    "name": "BigClash",
+                    "description": "100% až 12 500 Kč + 200 FS + 1 Bonus Crab"
                 }
             },
             {
@@ -2754,8 +2675,8 @@ max-width: 70px;
                 "position": 6,
                 "item": {
                     "@type": "Organization",
-                    "name": "BigClash",
-                    "description": "100% až do 12 500 Kč + 200 FS + 1 Bonus Crab"
+                    "name": "Lizaro",
+                    "description": "250% až 75 000 Kč + 350 točení zdarma!"
                 }
             },
             {
@@ -2764,7 +2685,7 @@ max-width: 70px;
                 "item": {
                     "@type": "Organization",
                     "name": "GoldSpin",
-                    "description": "Bonus 100 % až na $2 250 + 100 free spinů"
+                    "description": "100 % až do $2 250 + 100 FS"
                 }
             },
             {
@@ -2773,7 +2694,7 @@ max-width: 70px;
                 "item": {
                     "@type": "Organization",
                     "name": "Zoccer",
-                    "description": "100% do 12 500 Kč + 200 FS"
+                    "description": "100% až 12 500 Kč + 200 FS"
                 }
             }
         ]
@@ -3156,7 +3077,7 @@ max-width: 70px;
                     <div class="m-84c750">
                                                     <img src="img/c917b0a57cf2fdb26dc6d9f6f8b1a27b.webp" alt="Logo" style="max-width: 280px; margin-bottom: 15px;    max-height: 150px;">
                                                 <p></p>
-                    </div>
+                                            </div>
                     <div class="m-84c750">
                         <ul class="b-76b895">
                                                                                                                             <li>
